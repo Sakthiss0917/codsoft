@@ -1,21 +1,13 @@
 import java.util.Scanner;
-
-// BankAccount class to represent the user's bank account
 class BankAccount {
     private double balance;
-
-    // Constructor
     public BankAccount(double balance) {
         this.balance = balance;
     }
-
-    // Method to deposit money into the account
     public void deposit(double amount) {
         balance += amount;
         System.out.println("Deposit successful. Current balance: " + balance);
     }
-
-    // Method to withdraw money from the account
     public void withdraw(double amount) {
         if (amount > balance) {
             System.out.println("Insufficient funds. Withdrawal failed.");
@@ -24,23 +16,15 @@ class BankAccount {
             System.out.println("Withdrawal successful. Current balance: " + balance);
         }
     }
-
-    // Method to check the account balance
     public double checkBalance() {
         return balance;
     }
 }
-
-// ATM class to represent the ATM machine
 public class task3{
     private BankAccount bankAccount;
-
-    // Constructor
     public task3(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
-
-    // Method to display the ATM menu
     public void displayMenu() {
         System.out.println("Welcome to the ATM");
         System.out.println("1. Withdraw");
@@ -48,8 +32,6 @@ public class task3{
         System.out.println("3. Check Balance");
         System.out.println("4. Exit");
     }
-
-    // Method to handle user's choice
     public void handleChoice(int choice, Scanner scanner) {
         switch (choice) {
             case 1:
